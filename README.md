@@ -1,6 +1,6 @@
 # graphile-migrate-nix
 
-Install [graphile-migrate] using the Nix package manager.
+Install [graphile-migrate](https://github.com/graphile/migrate) using the Nix package manager.
 
 > Opinionated SQL-powered productive roll-forward migration tool for PostgreSQL
 
