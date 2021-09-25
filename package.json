@@ -1,10 +1,7 @@
 {
     "name": "graphile-migrate-nix",
-    "version": "1.0.0",
-    "description": "",
-    "scripts": {},
-    "author": "",
+    "version": "1.2.0",
     "dependencies": {
-        "graphile-migrate": "*"
+        "graphile-migrate": "1.2.0"
     }
 }
