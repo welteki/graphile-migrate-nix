@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, utils, ... }@inputs: {
 
-    overlay = final: prev:
+    overlays.default = final: prev:
       let
         pkgs = final;
       in
@@ -23,14 +23,14 @@
     let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ self.overlay ];
+        overlays = [ self.overlays.default ];
       };
     in
     {
 
-      defaultPackage = pkgs.graphile-migrate;
+      packages.default = pkgs.graphile-migrate;
 
-      devShell = pkgs.mkShell {
+      devShells.default = pkgs.mkShell {
         buildInputs = [
           pkgs.nodePackages.node2nix
           pkgs.nixpkgs-fmt
